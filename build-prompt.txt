@@ -1,0 +1,59 @@
+You are building a complete React + TypeScript + Tailwind MVP for Paret Mining USA. The project is already scaffolded at /workspace/paret-mvp. Read the SPEC.md first, then build the entire application.
+
+## SPEC.md Summary
+- Dark industrial theme (navy-black background, steel cards, amber accent)
+- 3 pages: Home (landing), Portal (3-tab chat interface), Dashboard (staff back-office)
+- AI chat for Royalty Owner, Compliance, Lead Intake tabs
+- Smart forms that submit and create cases
+- Staff dashboard with stats and case table
+- All data is mock/pre-loaded — no backend needed
+
+## BUILD THIS
+
+### Step 1: Install dependencies
+npm install react-router-dom @tailwindcss/vite tailwindcss
+
+### Step 2: Update src/index.css
+Replace the entire file with:
+```css
+@import "tailwindcss";
+body { background: #0d1117; color: #e6edf3; }
+* { box-sizing: border-box; }
+```
+
+### Step 3: Create src/data/mockData.ts with the knowledge base and mock cases
+
+### Step 4: Create all components and pages:
+- src/components/NavBar.tsx
+- src/components/Hero.tsx
+- src/components/FeatureCard.tsx
+- src/components/ChatWindow.tsx
+- src/components/SmartForm.tsx
+- src/components/StatusBadge.tsx
+- src/components/DashboardTable.tsx
+- src/components/StatsCard.tsx
+- src/pages/Home.tsx
+- src/pages/Portal.tsx
+- src/pages/Dashboard.tsx
+- src/App.tsx
+
+### Step 5: AI Chat Logic
+- Quick action buttons auto-send a message and show the SmartForm
+- AI responds with content from knowledgeBase with 800ms typing delay
+- Form submission adds case to dashboard
+
+### Step 6: Build
+npm run build
+
+### Step 7: Deploy
+Use the deploy tool with dist_dir="/workspace/paret-mvp/dist" and project_name="Paret Mining AI Portal"
+
+## IMPORTANT
+- Use Tailwind classes only — no custom CSS
+- Fully dark-themed with #0d1117 background
+- Professional look for VP demo
+- All content specific to Paret Mining USA
+- ChatWindow scrolls to bottom on new messages
+- Dashboard shows 6 pre-loaded cases
+
+When done, run: openclaw system event --text "Paret MVP fully built and deployed" --mode now
